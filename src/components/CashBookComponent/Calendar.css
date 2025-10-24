@@ -1,0 +1,152 @@
+/* Calendar Picker Styles */
+.calendar-picker {
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: white;
+  max-width: 280px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background-color: #8B4513;
+  color: white;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.month-year {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #F5DEB3;
+}
+
+.calendar-grid {
+  padding: 0.75rem;
+}
+
+.day-headers {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.day-header {
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 0.25rem;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.calendar-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin: 0.5px;
+}
+
+.calendar-day.clickable {
+  cursor: pointer;
+  color: #374151;
+}
+
+.calendar-day.clickable:hover {
+  background-color: #f3f4f6;
+  color: #8B4513;
+}
+
+.calendar-day.selected {
+  background-color: #8B4513;
+  color: white;
+  font-weight: bold;
+}
+
+.calendar-day.today {
+  background-color: #F5DEB3;
+  color: #8B4513;
+  font-weight: bold;
+}
+
+.calendar-day.today.selected {
+  background-color: #8B4513;
+  color: white;
+}
+
+.calendar-day.empty {
+  cursor: default;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calendar-picker {
+    max-width: 100%;
+  }
+  
+  .calendar-header {
+    padding: 0.75rem;
+  }
+  
+  .month-year {
+    font-size: 0.9rem;
+  }
+  
+  .nav-button {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-header {
+    padding: 0.5rem;
+  }
+  
+  .month-year {
+    font-size: 0.8rem;
+  }
+  
+  .nav-button {
+    font-size: 1rem;
+  }
+  
+  .calendar-day {
+    height: 35px;
+    width: 35px;
+    font-size: 0.8rem;
+  }
+  
+  .day-header {
+    font-size: 0.7rem;
+    padding: 0.25rem;
+  }
+}
