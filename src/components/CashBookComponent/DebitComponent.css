@@ -1,0 +1,230 @@
+.debit-component {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.debit-header {
+  background-color: #dc2626;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.debit-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fef2f2;
+}
+
+.debit-header button {
+  background-color: #ffffff;
+  color: #dc2626;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.debit-header button:hover {
+  background-color: #fef2f2;
+  border-color: #fef2f2;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.debit-header button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.debit-header button:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.debit-subtitle {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.loading-state {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.debit-table-container {
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.debit-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.debit-table thead {
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+}
+
+.debit-table th {
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #dc2626;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.debit-table th:nth-child(1) {
+  width: 25%; /* Name column */
+}
+
+.debit-table th:nth-child(2) {
+  width: 35%; /* Description column */
+}
+
+.debit-table th:nth-child(3) {
+  width: 25%; /* Amount column */
+  text-align: right;
+}
+
+.debit-table th:nth-child(4) {
+  width: 15%; /* Action column */
+  text-align: center;
+}
+
+.debit-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+.debit-table tbody tr:hover {
+  background-color: #fef2f2;
+}
+
+.transaction-name {
+  font-weight: 600;
+  color: #374151;
+}
+
+.transaction-description {
+  color: #6b7280;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.transaction-amount {
+  font-weight: 600;
+  color: #dc2626;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.transaction-action {
+  text-align: center;
+  width: 100px;
+}
+
+.transaction-action button {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.transaction-action button:hover {
+  background-color: #b91c1c;
+}
+
+.transaction-action button:active {
+  background-color: #991b1b;
+}
+
+.transaction-action button:focus {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+.no-transactions {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.no-transactions p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .debit-component {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .debit-header {
+    padding: 0.75rem;
+  }
+  
+  .debit-title {
+    font-size: 1.125rem;
+  }
+  
+  .debit-table th,
+  .debit-table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .transaction-description {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .debit-header {
+    padding: 0.5rem;
+  }
+  
+  .debit-title {
+    font-size: 1rem;
+  }
+  
+  .debit-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .debit-table th,
+  .debit-table td {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+  
+  .transaction-description {
+    max-width: 120px;
+  }
+}

@@ -1,0 +1,231 @@
+.credit-component {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.credit-header {
+  background-color: #059669;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.credit-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.credit-header button {
+  background-color: #ffffff;
+  color: #059669;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.credit-header button:hover {
+  background-color: #f0fdf4;
+  border-color: #f0fdf4;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.credit-header button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.credit-header button:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.credit-subtitle {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.loading-state {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.credit-table-container {
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.credit-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.credit-table thead {
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+}
+
+.credit-table th {
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #8B4513;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.credit-table th:nth-child(1) {
+  width: 25%; /* Name column */
+}
+
+.credit-table th:nth-child(2) {
+  width: 35%; /* Description column */
+}
+
+.credit-table th:nth-child(3) {
+  width: 25%; /* Amount column */
+  text-align: right;
+}
+
+.credit-table th:nth-child(4) {
+  width: 15%; /* Action column */
+  text-align: center;
+}
+
+.credit-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+.credit-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.transaction-name {
+  font-weight: 600;
+  color: #374151;
+}
+
+.transaction-description {
+  color: #6b7280;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.transaction-amount {
+  font-weight: 600;
+  color: #059669;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.transaction-action {
+  text-align: center;
+  width: 100px;
+}
+
+.transaction-action button {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.transaction-action button:hover {
+  background-color: #b91c1c;
+}
+
+.transaction-action button:active {
+  background-color: #991b1b;
+}
+
+.transaction-action button:focus {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+.no-transactions {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.no-transactions p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .credit-component {
+    width: 100%;
+    float: none;
+    margin-bottom: 1rem;
+  }
+  
+  .credit-header {
+    padding: 0.75rem;
+  }
+  
+  .credit-title {
+    font-size: 1.125rem;
+  }
+  
+  .credit-table th,
+  .credit-table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .transaction-description {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .credit-header {
+    padding: 0.5rem;
+  }
+  
+  .credit-title {
+    font-size: 1rem;
+  }
+  
+  .credit-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .credit-table th,
+  .credit-table td {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+  
+  .transaction-description {
+    max-width: 120px;
+  }
+}

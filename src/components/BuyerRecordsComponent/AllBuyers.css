@@ -1,0 +1,313 @@
+.all-buyers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.all-buyers-header {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8B4513;
+  margin: 0 0 0.5rem 0;
+}
+
+.header-subtitle {
+  color: #666;
+  margin: 0;
+}
+
+.refresh-button {
+  background-color: #8B4513;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background-color: #A0522D;
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.refresh-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.message-alert {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.message-alert.success {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #15803d;
+}
+
+.message-alert.error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.message-icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.buyers-table-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.buyers-table-container {
+  overflow-x: auto;
+}
+
+.buyers-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.buyers-table thead {
+  background-color: #8B4513;
+  color: white;
+}
+
+.buyers-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.buyers-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.buyers-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.buyer-id {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.buyer-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #8B4513;
+}
+
+.buyer-contact {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.buyer-contact.na {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.buyer-balance {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.buyer-balance.positive {
+  color: #059669;
+}
+
+.buyer-balance.negative {
+  color: #dc2626;
+}
+
+.view-transactions-btn {
+  background-color: #8B4513;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-transactions-btn:hover {
+  background-color: #A0522D;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  max-width: 64rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.modal-header {
+  background-color: #8B4513;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: #d1d5db;
+}
+
+.modal-close-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: calc(90vh - 80px);
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .header-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .refresh-button {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-buyers-container {
+    padding: 1rem;
+  }
+  
+  .all-buyers-header {
+    padding: 1rem;
+  }
+  
+  .buyers-table th,
+  .buyers-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .view-transactions-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .modal-content {
+    margin: 0.5rem;
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 1rem;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+    max-height: calc(95vh - 60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .buyers-table th,
+  .buyers-table td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+  }
+  
+  .view-transactions-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
