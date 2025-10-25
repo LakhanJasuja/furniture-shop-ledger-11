@@ -4,6 +4,7 @@ import './Navbar.css';
 
 function Navbar() {
   const [showBuyerDropdown, setShowBuyerDropdown] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const location = useLocation();
 
   const sections = [
@@ -26,6 +27,15 @@ function Navbar() {
     setShowBuyerDropdown(false);
   };
 
+  const toggleMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu);
+  };
+
+  const handleMobileMenuClick = () => {
+    setShowMobileMenu(false);
+    setShowBuyerDropdown(false);
+  };
+
   const isActive = (path) => {
     return location.pathname === path;
   };
@@ -40,12 +50,20 @@ function Navbar() {
         <div className="navbar-header">
           <h1 className="navbar-title">Wood World Ledger</h1>
         </div>
-        <ul className="navbar-menu">
+        
+        <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+        
+        <ul className={`navbar-menu ${showMobileMenu ? 'mobile-menu-open' : ''}`}>
         {sections.map((section) => (
           <li key={section.name} className="navbar-item">
             <Link
               to={section.path}
               className={`navbar-link ${isActive(section.path) ? 'active' : ''}`}
+              onClick={handleMobileMenuClick}
             >
               {section.name}
             </Link>
