@@ -183,10 +183,11 @@ const CashRecords = () => {
           amount: '',
           date: ''
         });
-        setShowExpenseForm(false);
         // Refresh balance and recent transactions
         fetchCashBalance();
         fetchRecentTransactions();
+        alert("Cash Transaction uploaded successfully");
+
       }
     } catch (err) {
       setMessage('Error recording transaction: ' + err.message);
